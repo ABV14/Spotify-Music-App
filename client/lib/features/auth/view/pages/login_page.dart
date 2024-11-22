@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: passwordController,
                   isObsureText: true),
               const SizedBox(height: 20),
-              const AuthGradientButton(buttonText: "Sign In"),
+              AuthGradientButton(onTap: () {}, buttonText: "Sign In"),
               const SizedBox(height: 20),
               RichText(
                   text: TextSpan(
