@@ -1,0 +1,80 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+generated_plugin_registrant.dart
+
+# Obfuscation/Encryption-related
+app.*.keystore
+
+# iOS-related
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/Flutter/Generated.xcconfig
+ios/ServiceDefinitions.json
+ios/Runner.xcworkspace/
+ios/Pods/
+ios/.symlinks/
+ios/build/
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Android-related
+.android/
+gradle/
+local.properties
+app/*.iml
+app/build/
+
+# Web-related
+web/.dart_tool/
+web/.packages/
+web/build/
+
+# macOS-related
+macos/.dart_tool/
+macos/.packages/
+macos/Pods/
+macos/build/
+macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Windows-related
+windows/.dart_tool/
+windows/.packages/
+windows/build/
+windows/Flutter/GeneratedPluginRegistrant.*
+
+# Linux-related
+linux/.dart_tool/
+linux/.packages/
+linux/build/
+linux/Flutter/GeneratedPluginRegistrant.*
+
+# IntelliJ/Android Studio related
+*.iml
+.idea/
+*.ipr
+*.iws
+*.ml-model
+
+# VS Code related
+.vscode/
+
+# Other
+*.log
+*.lock
+*.pyc
+*.pyo
+*.swp
+.DS_Store
+*.classpath
+*.project
+*.settings/
+*.history/
+*.suo
+*.directory
+Thumbs.db
