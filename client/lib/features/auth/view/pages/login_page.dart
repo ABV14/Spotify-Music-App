@@ -1,7 +1,9 @@
 import 'package:client/core/theme/app_pallette.dart';
+import 'package:client/features/auth/view/pages/signup_page.dart';
 import 'package:client/features/auth/view/widgets/auth_gradient_button.dart';
 import 'package:client/features/auth/view/widgets/custom_field.dart';
 import 'package:flutter/material.dart';
+import 'package:client/features/auth/repositories/auth_remote_repository.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,8 +21,8 @@ class _LoginPageState extends State<LoginPage> {
   void dispose() {
     emailController.dispose();
     passwordController.dispose();
-    super.dispose();
     formKey.currentState!.validate();
+    super.dispose();
   }
 
   @override
@@ -50,19 +52,32 @@ class _LoginPageState extends State<LoginPage> {
                   controller: passwordController,
                   isObsureText: true),
               const SizedBox(height: 20),
-              AuthGradientButton(onTap: () {}, buttonText: "Sign In"),
+              AuthGradientButton(
+                  onTap: () async {
+                    await AuthRemoteRepository().login(
+                        email: emailController.text,
+                        password: passwordController.text);
+                  },
+                  buttonText: "Sign In"),
               const SizedBox(height: 20),
-              RichText(
-                  text: TextSpan(
-                      text: 'Don\'t have an account?',
-                      style: Theme.of(context).textTheme.titleMedium,
-                      children: const [
-                    TextSpan(
-                        text: " Sign Up",
-                        style: TextStyle(
-                            color: Pallete.gradient2,
-                            fontWeight: FontWeight.bold))
-                  ]))
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignupPage()));
+                  },
+                  child: RichText(
+                      text: TextSpan(
+                          text: 'Don\'t have an account?',
+                          style: Theme.of(context).textTheme.titleMedium,
+                          children: const [
+                        TextSpan(
+                            text: " Sign Up",
+                            style: TextStyle(
+                                color: Pallete.gradient2,
+                                fontWeight: FontWeight.bold))
+                      ])))
             ]),
           ),
         ));
