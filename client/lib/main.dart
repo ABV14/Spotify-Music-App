@@ -3,7 +3,7 @@ import 'package:client/core/theme/theme.dart';
 import 'package:client/features/auth/view/pages/home_page.dart';
 // import 'package:client/features/auth/view/pages/login_page.dart';
 import 'package:client/features/auth/view/pages/signup_page.dart';
-import 'package:client/features/auth/view/pages/upload_song_page.dart';
+// import 'package:client/features/auth/view/pages/upload_song_page.dart';
 import 'package:client/features/auth/viewmodel/auth_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -32,6 +32,6 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
         title: 'Spotify',
         theme: AppTheme.darkThemeMode,
-        home: currentUser == null ? const SignupPage() : const UploadSongPage());
+        home: currentUser == null ? const SignupPage() : const HomePage());
   }
 }
