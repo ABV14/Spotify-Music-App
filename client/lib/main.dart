@@ -1,6 +1,6 @@
 import 'package:client/core/providers/current_user_notifier.dart';
 import 'package:client/core/theme/theme.dart';
-import 'package:client/features/auth/view/pages/home_page.dart';
+import 'package:client/features/home/view/home_page.dart';
 // import 'package:client/features/auth/view/pages/login_page.dart';
 import 'package:client/features/auth/view/pages/signup_page.dart';
 // import 'package:client/features/auth/view/pages/upload_song_page.dart';

@@ -70,3 +70,8 @@ def upload_song(song:UploadFile = File(...),
     db.refresh(new_song)
 
     return new_song
+
+@router.get('/songs')
+def listSong(db = Depends(get_db), auth_dict = Depends(auth_middleware.middleware)):
+   songs = db.query(Song).all()
+   return songs
