@@ -45,4 +45,8 @@ void playPause(){
   state = state?.copyWith(hexcode: state?.hexcode);
 }
 
+void seek(double val){
+  audioPlayer!.seek(Duration(milliseconds: (val * audioPlayer!.duration!.inMilliseconds).toInt()));
+}
+
 }
